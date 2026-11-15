@@ -1,0 +1,177 @@
+{
+  "paused": false,
+  "learn_count": 13,
+  "last_learn": "2026-11-15T18:17:35Z",
+  "score": 36,
+  "history": [
+    {
+      "at": "2026-11-11T21:40:21Z",
+      "headlines": 14,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-12T05:03:35Z",
+      "headlines": 14,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-12T14:21:46Z",
+      "headlines": 7,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-12T21:39:54Z",
+      "headlines": 14,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-13T04:18:51Z",
+      "headlines": 14,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-13T13:41:43Z",
+      "headlines": 14,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-13T21:06:45Z",
+      "headlines": 14,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-14T04:15:45Z",
+      "headlines": 14,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-14T12:45:32Z",
+      "headlines": 14,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-14T19:37:53Z",
+      "headlines": 14,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-15T00:34:04Z",
+      "headlines": 14,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-15T10:13:12Z",
+      "headlines": 14,
+      "sabak": true
+    },
+    {
+      "at": "2026-11-15T18:17:35Z",
+      "headlines": 14,
+      "sabak": true
+    }
+  ],
+  "brain": [
+    {
+      "at": "2026-11-13T11:32:32Z",
+      "chuna": [
+        "Har baar: data kitna purana hai batao",
+        "seekho: India ke tech/AI niyam aur market ke naye tools"
+      ],
+      "wajah": [
+        "Swag ke 1 aadesh bache hain",
+        "knowledge me Bharat wala hissa kam hai"
+      ],
+      "hua": []
+    },
+    {
+      "at": "2026-11-13T18:45:08Z",
+      "chuna": [
+        "Har baar: data kitna purana hai batao"
+      ],
+      "wajah": [
+        "Swag ke 1 aadesh bache hain"
+      ],
+      "hua": []
+    },
+    {
+      "at": "2026-11-13T23:55:39Z",
+      "chuna": [
+        "Har baar: data kitna purana hai batao"
+      ],
+      "wajah": [
+        "Swag ke 1 aadesh bache hain"
+      ],
+      "hua": []
+    },
+    {
+      "at": "2026-11-14T04:24:13Z",
+      "chuna": [
+        "Har baar: data kitna purana hai batao"
+      ],
+      "wajah": [
+        "Swag ke 1 aadesh bache hain"
+      ],
+      "hua": []
+    },
+    {
+      "at": "2026-11-14T11:39:17Z",
+      "chuna": [
+        "Har baar: data kitna purana hai batao"
+      ],
+      "wajah": [
+        "Swag ke 1 aadesh bache hain"
+      ],
+      "hua": []
+    },
+    {
+      "at": "2026-11-14T17:18:59Z",
+      "chuna": [
+        "Har baar: data kitna purana hai batao"
+      ],
+      "wajah": [
+        "Swag ke 1 aadesh bache hain"
+      ],
+      "hua": []
+    },
+    {
+      "at": "2026-11-14T21:37:35Z",
+      "chuna": [
+        "Har baar: data kitna purana hai batao"
+      ],
+      "wajah": [
+        "Swag ke 1 aadesh bache hain"
+      ],
+      "hua": []
+    },
+    {
+      "at": "2026-11-15T01:18:17Z",
+      "chuna": [
+        "Har baar: data kitna purana hai batao"
+      ],
+      "wajah": [
+        "Swag ke 1 aadesh bache hain"
+      ],
+      "hua": []
+    },
+    {
+      "at": "2026-11-15T08:02:33Z",
+      "chuna": [
+        "Har baar: data kitna purana hai batao"
+      ],
+      "wajah": [
+        "Swag ke 1 aadesh bache hain"
+      ],
+      "hua": []
+    },
+    {
+      "at": "2026-11-15T15:37:50Z",
+      "chuna": [
+        "Har baar: data kitna purana hai batao"
+      ],
+      "wajah": [
+        "Swag ke 1 aadesh bache hain"
+      ],
+      "hua": []
+    }
+  ]
+}
