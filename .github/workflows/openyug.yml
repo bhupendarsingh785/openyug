@@ -1,0 +1,73 @@
+name: OpenYug
+
+# OpenYug 2 — Arjun/Swag ka agent, GitHub ke free computer par.
+# Har 2 ghante, aur jab bhi agent/orders.md (ya agents/) GitHub par badle — turant.
+# AI: GitHub Models (is workflow ka apna token, koi secret zaroori nahi) + jo keys
+#     repo Settings → Secrets and variables → Actions mein daali hon.
+# Code badlav: kabhi main par nahi — hamesha branch + Pull Request (Merge = owner ki haan).
+
+on:
+  schedule:
+    - cron: "17 */2 * * *"
+  push:
+    branches: [main]
+    paths: ["agent/orders.md", "agent/agents/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write        # report / yaad commit karna
+  pull-requests: write   # khud-sudhaar ke PR
+  models: read           # GitHub Models (free AI) — isi token se
+
+concurrency:
+  group: openyug
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: OpenYug chalao
+        env:
+          ARJUN_CLOUD: "1"
+          ARJUN_AI_HOME: ${{ runner.temp }}/arjun-ai
+          ARJUN_GIT_NAME: OpenYug
+          ARJUN_GIT_EMAIL: openyug@users.noreply.github.com
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
+        run: python3 agent/run.py
+
+      - name: Report aur yaad save karo
+        if: always()
+        run: |
+          git checkout -q main 2>/dev/null || true
+          git config user.name "OpenYug"
+          git config user.email "openyug@users.noreply.github.com"
+          git add agent/ || true
+          git commit -qm "openyug: report $(date -u +%FT%TZ)" || { echo "kuch naya nahi"; exit 0; }
+          for i in 1 2 3; do
+            git pull -q --rebase --autostash origin main && git push -q origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
+          echo "push nahi hua (phone se saath mein badlav) — agli run mein"
